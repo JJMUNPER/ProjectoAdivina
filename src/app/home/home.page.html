@@ -8,8 +8,9 @@
 
 <ion-content [fullscreen]="true">
   <div class="ion-padding">
-    <ion-input type="number" min="1" max="100" placeholder="Introduce un número del 1 al 100">
+    <ion-input type="number" min="1" max="100" [(ngModel)]="num" placeholder="Introduce un número del 1 al 100">
     </ion-input>
-    <ion-button expand="block">Adivina</ion-button>
+    <p>El numero secreto es {{ mayorMenor }} que el numero introducido</p>
+    <ion-button expand="block" (click)="compruebaNumero()">Adivina</ion-button>
   </div>
 </ion-content>
