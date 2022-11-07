@@ -12,9 +12,9 @@ export class HomePage {
   mayorMenor: string = '...';
 
   constructor() {
-    console.log("El numero secreto es: " + this.numSecret);
+    console.log('El numero secreto es: ' + this.numSecret);
   }
-  
+
   numAleatorio(a , b){
     return Math.round(Math.random()*(b-a)+ parseInt(a));
   }
@@ -29,6 +29,14 @@ export class HomePage {
         this.mayorMenor = 'igual';
       }
     }
+  }
+
+  reinicia(){
+    //Reiniciamos las variables
+    this.num = null;
+    this.mayorMenor = '...';
+    this.numSecret = this.numAleatorio(1, 100);
+    console.log('El numero secreto es: ' + this.numSecret);
   }
 
 }
